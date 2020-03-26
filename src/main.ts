@@ -17,10 +17,10 @@ async function bootstrap() {
   const document = SwaggerModule.createDocument(app, options);
   SwaggerModule.setup('explore', app, document);
 
-  if(process.env.NODE_ENV !== 'production') {
-    app.enableCors();
-  }
-  
+  // if(process.env.NODE_ENV !== 'production') {
+  //   app.enableCors();
+  // }
+  app.enableCors();
   const serverConfig = config.get('server');
   const port = process.env.PORT || serverConfig.port;
 
