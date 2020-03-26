@@ -7,4 +7,5 @@ db:
   database: 'taskmanager'
 
 jwt:
+  secret: 'waelZoaiter'
   expiresIn: 3600
