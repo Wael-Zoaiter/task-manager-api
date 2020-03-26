@@ -6,7 +6,7 @@ import * as config from 'config';
 const dbConfig = config.get('db');
 
 export const typeOrmConfig: TypeOrmModuleOptions = {
-    url: process.env.DATABASE_URL,
+    url: process.env.DATABASE_URL || dbConfig.uri,
     type: dbConfig.type,
     host: process.env.RDS_HOSTNAME || dbConfig.host,
     port: process.env.RDS_PORT || dbConfig.port,
