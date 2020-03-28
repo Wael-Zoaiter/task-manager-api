@@ -5,6 +5,9 @@ import * as config from 'config';
 
 const dbConfig = config.get('db');
 
+console.log('ENV Variables', process.env);
+
+
 export const typeOrmConfig: TypeOrmModuleOptions = {
     url: process.env.DATABASE_URL || dbConfig.uri,
     type: dbConfig.type,
