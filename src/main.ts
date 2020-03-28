@@ -7,7 +7,7 @@ import * as config from 'config';
 async function bootstrap() {
   const logger = new Logger('bootstrap');
   const app = await NestFactory.create(AppModule);
-  logger.verbose('*************** ENV Variables *************', process.env);
+  logger.verbose('*************** ENV Variables *************', JSON.stringify(process.env));
 
   const options = new DocumentBuilder()
     .addBearerAuth()
