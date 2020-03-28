@@ -21,7 +21,7 @@
     "migration:generate": "ts-node node_modules/.bin/typeorm migration:generate",
     "migration:run": "ts-node node_modules/.bin/typeorm migration:run",
     "migration:revert": "ts-node node_modules/.bin/typeorm migration:revert",
-    "deploy": "git add . && git commit -m \"Deploy\" && git push heroku master"
+    "deploy": "git add . && git commit -m \"Deploy\" && git push && git push heroku master"
   },
   "dependencies": {
     "@nestjs/common": "^6.10.14",
